@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+  font-family: 'Azeret Mono', monospace;
+}
+
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.75);
+  outline: none;
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.90)
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output-container {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output-container > .previous-operand {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.output-container > .current-operand {
+  font-size: 2.5rem;
+  color: white;
+}
+
